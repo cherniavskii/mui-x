@@ -716,6 +716,9 @@ export const useGridRowSelection = (
 
   const toggleAllRows = React.useCallback(
     (value: boolean) => {
+      if (props.disableMultipleRowSelection) {
+        return;
+      }
       const filterModel = gridFilterModelSelector(apiRef);
       const quickFilterModel = gridQuickFilterValuesSelector(apiRef);
       const hasFilters =
@@ -741,6 +744,7 @@ export const useGridRowSelection = (
       getRowsToBeSelected,
       props.checkboxSelectionVisibleOnly,
       props.isRowSelectable,
+      props.disableMultipleRowSelection,
     ],
   );
 
