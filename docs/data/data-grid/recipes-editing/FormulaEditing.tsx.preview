@@ -1,0 +1,12 @@
+<DataGridPremium
+  apiRef={apiRef}
+  rows={initialRows}
+  columns={columns}
+  showCellVerticalBorder
+  showColumnVerticalBorder
+  rowHeight={32}
+  columnHeaderHeight={48}
+  onCellModesModelChange={onCellModesModelChange}
+  cellSelection
+  disableRowSelectionOnClick
+/>
